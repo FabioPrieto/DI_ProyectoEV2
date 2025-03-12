@@ -1,15 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-function Tarea({ task, deleteTask, toggleComplete }) {
+function Tarea({ task, deleteTask, toggleComplete, updateTask }) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedText, setEditedText] = useState(task.text);
+
+  const handleUpdate = () => {
+    if (isEditing) {
+      // Save the changes
+      updateTask(task.id, editedText);
+    }
+    setIsEditing(!isEditing);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleUpdate();
+    }
+  };
+
   return (
-    <div>
-      <span
-        style={{ textDecoration: task.completed ? 'line-through' : 'none' }}
-        onClick={() => toggleComplete(task.id)}
+    <div className={`Tarea ${isEditing ? 'Editando' : ''}`}>
+      <div className="custom-checkbox">  
+        <input 
+          type="checkbox" 
+          checked={task.completed} 
+          onChange={() => toggleComplete(task.id)}
+        />
+      </div>
+
+      <input
+        type="text"
+        value={isEditing ? editedText : task.text}
+        onChange={(e) => setEditedText(e.target.value)}
+        readOnly={!isEditing}
+        onKeyPress={handleKeyPress}
+      />
+
+      {isEditing && (
+        <button
+          onClick={handleUpdate}
+          className="update-button"
+        >
+          Actualizar
+        </button>
+      )}
+
+      <button
+        onClick={handleUpdate}
       >
-        {task.text}
-      </span>
-      <button onClick={() => deleteTask(task.id)}>Eliminar</button>
+        <FontAwesomeIcon icon={faPenToSquare} />
+      </button>
+
+      <button
+        onClick={() => deleteTask(task.id)}
+      >
+        <FontAwesomeIcon icon={faTrash} />
+      </button>
     </div>
   );
 }

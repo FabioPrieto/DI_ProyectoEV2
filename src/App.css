@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App */
+div.App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 90%;
+  margin: 10px auto;
+  max-width: 1000px;
+  box-shadow: 0px 0px 10px rgb(207, 207, 207) ;
+  overflow: hidden;
+}
+
+.App>* {
+  width: 100%;
+  text-align: center;
+}
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+}
+header > *{
+  margin: 15px;
   color: white;
 }
+header button{
+  background-color: #003063;
+  border: 0px;
+  padding: 7px;
+  border-radius: 6px;
+}
+/* Formulario Tareas */
+.form-container {
+  width: 100%;
+}
+.input-container {
+  position: relative;
+  width: 100%;
+}
+.task-input {
+  width: 95%;
+  padding: 10px 40px 10px 10px;
+  /* Espacio a la derecha para el icono */
+  font-size: 16px;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+.task-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.add-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: green;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  border-radius: 6px;
+}
+.add-button > *{
+  margin-top: 3px;
+}
+/* Tareas */
+.Tarea {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 
-.App-link {
-  color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Tarea:hover {
+  background-color: #d3d3d3;
+}
+
+.Tarea>Input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  /* Container style */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  /* Checkbox style */
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox input[type="checkbox"]:checked::before {
+  /* Checkmark style */
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 13px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-checkbox label {
+  /* Label style */
+  color: white;
+  cursor: pointer;
+}
+
+.Tarea>input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  margin: 0px 5px;
+  width: 90%;
+  cursor: default;
+}
+
+.Editando>input[type="text"] {
+  border-bottom: 1px solid #9c9c9c;
+  cursor: text;
+}
+
+.update-button {
+  background-color: #28a745 !important;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.update-button:hover {
+  background-color: #218838 !important;
+}
+
+.Tarea button{
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }

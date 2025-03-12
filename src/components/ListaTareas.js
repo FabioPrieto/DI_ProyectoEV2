@@ -1,7 +1,8 @@
 import React from 'react';
 import Tarea from './Tarea';
 
-function ListaTareas({ tasks, deleteTask, toggleComplete }) {
+function ListaTareas({ tasks, deleteTask, toggleComplete, updateTask }) {
+
   return (
     <div>
       {tasks.map((task) => (
@@ -10,6 +11,7 @@ function ListaTareas({ tasks, deleteTask, toggleComplete }) {
           task={task}
           deleteTask={deleteTask}
           toggleComplete={toggleComplete}
+          updateTask={updateTask}
         />
       ))}
     </div>
