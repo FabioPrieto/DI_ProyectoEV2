@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+### Aplicación de Lista de Tareas - React  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación moderna e interactiva de lista de tareas construida con React, con gestión de tareas en tiempo real y capacidades de filtrado.  
 
-## Available Scripts
+### Características  
 
-In the project directory, you can run:
+* Crear nuevas tareas con una interfaz limpia e intuitiva  
+* Marcar tareas como completadas con una casilla de verificación personalizada  
+* Editar tareas existentes con edición en línea  
+* Eliminar tareas que ya no necesites  
+* Filtrar tareas para mostrar solo las no completadas  
+* Interfaz moderna con transiciones suaves y efectos de hover  
+* Diseño responsivo que funciona en todos los dispositivos  
 
-### `npm start`
+### Requisitos Previos  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Node.js (v14.0.0 o superior)  
+* npm (v6.0.0 o superior)  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Instalación  
 
-### `npm test`
+1. Clona el repositorio:  
+```bash
+git clone [https://github.com/FabioPrieto/DI_ProyectoEV2.git]
+cd todo-list-app
+```  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Instala las dependencias:  
+```bash
+npm install
 
-### `npm run build`
+# Dependencias necesarias
+npm install @fortawesome/react-fontawesome
+npm install @fortawesome/free-solid-svg-icons
+npm install react-icons
+```  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Estructura del Proyecto  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El proyecto consta de varios componentes clave:  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* `App.js`: Componente principal que gestiona el estado de la aplicación  
+* `Header.js`: Contiene el título y el toggle de filtrado  
+* `FormularioTareas.js`: Componente de formulario para agregar nuevas tareas  
+* `ListaTareas.js`: Contenedor para todos los elementos de tarea  
+* `Tarea.js`: Componente individual de tarea con funcionalidad de edición/eliminación  
+* `App.css`: Estilos para toda la aplicación  
 
-### `npm run eject`
+### Funcionalidades Principales  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+La aplicación proporciona las siguientes características esenciales:  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Gestión de Tareas:  
+   * Agregar nuevas tareas  
+   * Editar tareas existentes  
+   * Eliminar tareas  
+   * Marcar tareas como completas/incompletas  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Filtrado de Tareas:  
+   * Alternar entre mostrar todas las tareas o solo las no completadas  
+   * Indicador visual del estado actual del filtro  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Interfaz de Usuario:  
+   * Diseño personalizado de la casilla de verificación  
+   * Edición en línea con soporte para la tecla Enter  
+   * Efectos de hover en las tareas  
+   * Diseño responsivo  
 
-## Learn More
+### Uso  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para iniciar el servidor de desarrollo:  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```  
 
-### Code Splitting
+La aplicación estará disponible en `http://localhost:3000`  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Estilización  
 
-### Analyzing the Bundle Size
+La aplicación utiliza CSS personalizado con:  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Flexbox para la gestión del diseño  
+* Estilización personalizada de casillas de verificación  
+* Principios de diseño responsivo  
+* Efectos de sombra para mayor profundidad  
+* Estados de hover para mejorar la interacción del usuario  
 
-### Making a Progressive Web App
+### Contribución  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Haz un fork del repositorio  
+2. Crea una rama para tu funcionalidad (`git checkout -b feature/NuevaCaracterística`)  
+3. Confirma tus cambios (`git commit -m 'Agregar NuevaCaracterística'`)  
+4. Sube la rama (`git push origin feature/NuevaCaracterística`)  
+5. Abre un Pull Request  
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
