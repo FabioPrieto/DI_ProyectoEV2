@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Tarea({ task, deleteTask, toggleComplete, updateTask }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -56,7 +56,8 @@ function Tarea({ task, deleteTask, toggleComplete, updateTask }) {
       <button
         onClick={() => deleteTask(task.id)}
       >
-        <FontAwesomeIcon icon={faTrash} />
+        {/* <FontAwesomeIcon icon={faTrash} /> */}
+        <FontAwesomeIcon icon={faXmark} />
       </button>
     </div>
   );

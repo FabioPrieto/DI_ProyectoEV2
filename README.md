@@ -22,7 +22,7 @@ Una aplicación moderna e interactiva de lista de tareas construida con React, c
 1. Clona el repositorio:  
 ```bash
 git clone [https://github.com/FabioPrieto/DI_ProyectoEV2.git]
-cd todo-list-app
+cd DI_ProyectoEV2
 ```  
 
 2. Instala las dependencias:  

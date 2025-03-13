@@ -19,7 +19,7 @@ function FormularioTareas({ addTask }) {
           type="text"
           value={task}
           onChange={(e) => setTask(e.target.value)}
-          placeholder="Nueva tarea"
+          placeholder="Escribe una tarea"
           className="task-input"
         />
         <button type="submit" className="add-button">
