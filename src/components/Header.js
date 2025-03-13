@@ -14,7 +14,7 @@ function Header({ showCompleted, toggleFilter }) {
             : 'Todos'
         }`}
       >
-        {showCompleted ? 'Mostrar Todas ' : 'Filtrar No Completadas '}
+        {showCompleted ? 'Mostrar Todas ' : 'No Mostrar Completadas '}
         <FontAwesomeIcon   
           icon={showCompleted ? faEye : faEyeSlash}   
         /> 
